@@ -13,24 +13,42 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "package": "com.safe.alert"
     },
     "android": {
+      "permissions": [
+        "NOTIFICATIONS",
+        "BACKGROUND_FETCH",
+        "VIBRATE",
+        "WAKE_LOCK"
+      ],
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "foregroundImage": "./assets/images/shield.jpg",
+        "backgroundColor": "#ffffff",
+        "package": "com.safe.alert"
+      },
+      "package": "com.santiagosuescun07.Ambar"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/shield.jpg"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-notifications"
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "6df6aedb-e8ac-446b-adbb-fb6f159507e9"
+      }
     }
   }
 }
